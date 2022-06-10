@@ -1,0 +1,120 @@
+@import 'normalize';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+//* variables
+$primaryColor: #7e56da;
+$bgr: #ebecf0;
+$bgrAdd: #ffffff;
+$textColorPrimary: #6e7379;
+$textColorAdd: #9ea0a6;
+//* Styles
+* {
+  font-family: Ubuntu, Tahoma, Verdana, Arial, sans-serif;
+}
+body {
+  font-size: 18px;
+  background-color: $bgr;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+//*Main
+.main {
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(34, 60, 80, 0.05);
+  -moz-box-shadow: 0px 0px 8px 2px rgba(34, 60, 80, 0.05);
+  box-shadow: 0px 0px 8px 2px rgba(34, 60, 80, 0.05);
+  margin-top: 50px;
+  padding-top: 50px;
+  border-radius: 10px;
+  background-color: $bgrAdd;
+  height: 600px;
+  .main__head {
+    font-size: 24px;
+    text-align: center;
+  }
+  .form {
+    text-align: center;
+    width: 800px;
+
+    margin-top: 30px;
+    .input__form {
+      border: 1px solid $textColorAdd;
+      height: 30px;
+      padding-left: 10px;
+    }
+    .input__btn {
+      border: 1px solid $primaryColor;
+      background-color: $primaryColor;
+      color: $bgrAdd;
+      height: 30px;
+      width: 100px;
+      transition: 0.5s ease-in-out;
+    }
+    .input__btn:hover {
+      border: 1px solid $primaryColor;
+      background-color: $bgrAdd;
+      color: $textColorPrimary;
+    }
+  }
+  .result {
+    margin-top: 50px;
+
+    .result__values,
+    .result__result {
+      text-align: center;
+    }
+    .result__result {
+      margin-top: 20px;
+    }
+  }
+}
+//*Footer
+.footer {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 30px;
+  .footer__text {
+    & span {
+      font-weight: bold;
+    }
+  }
+}
+
+//* modal
+.modal {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  background-color: #f3f3f3;
+  padding: 5rem 6rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+.modal__header {
+  font-size: 30px;
+  margin-bottom: 4.5rem;
+  line-height: 1.5;
+}
+
+.btn--close-modal {
+  font-family: inherit;
+  color: inherit;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 4rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
